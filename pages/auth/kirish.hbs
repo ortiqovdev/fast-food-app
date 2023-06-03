@@ -1,0 +1,18 @@
+<div class="pt-48 px-40 bg-slate-200 h-screen">
+   <form action="/kirish" method="post"
+      class="flex flex-col bg-slate-200 w-2/5 mx-auto p-5 gap-2 active::scale-105 hover:shadow-xl  hover:shadow-slate-300 duration-300 rounded-xl ">
+      <h2 class="text-2xl font-semibold mx-auto pt-3 text-black">Kirish</h2>
+       {{#if loginErr}}
+       <p class="bg-red-300 p-2 rounded-lg text-red-500">{{loginError}}</p>
+       {{else}}
+      <p>Foydalanuvchi nomi</p>
+      <input type="text" name="username" placeholder="Mr Ortiqov" class="p-2 rounded-lg" autocomplete="off">
+      <p>Telefon raqam</p>
+      <input type="text" id="raqam" oninput="raqamniTekshir()" name="phone" placeholder="+998 (__) -___-__-__"
+         maxlength="16" class="p-2 mb-5 rounded-lg" autocomplete="off">
+      <button
+         class="border-solid border-black text-black border-2 p-2 w-28 mx-auto h-10 rounded-xl hover:bg-black    hover:text-white duration-300">Yuborish</button>
+       {{/if}}
+   </form>
+</div>
+<script src="/js/main.js"></script>

@@ -1,0 +1,45 @@
+<div
+   class="fixed top-0 overflow-x-hidden z-10 w-full bg-slate-100 h-24 px-40 text-black  flex justify-between items-center shadow-xl scale-100 ">
+   <a href="/">
+      <div class="flex items-center">
+         <img class="w-16 px-2 mr-2" src="/imgs/french-fries.png" alt="">
+         <p class="text-4xl font-semibold cursor-pointer">Fa<span class="text-red-600">st</span> food</p>
+      </div>
+   </a>
+   {{#if adminOn}}
+   <div class="flex list-none">
+
+      <li
+         class="text-xl duration-200 hover:text-red-600 px-2 {{#if dashboard}} text-red-600  border-b-2 border-red-500{{/if}}">
+         <a href="/admin">Dashboard</a>
+      </li>
+      <li
+         class="text-xl duration-200 hover:text-red-600 px-2{{#if update}} text-red-600  border-b-2 border-red-500{{/if}}">
+         <a href="/update">Update</a>
+      </li>
+      <li
+         class="text-xl duration-200 hover:text-red-600 px-2{{#if active}} text-red-600  border-b-2 border-red-500{{/if}}">
+         <a href="/active">Active</a>
+      </li>
+      <li
+         class="text-xl duration-200 hover:text-red-600 px-2{{#if allUsers}} text-red-600  border-b-2 border-red-500{{/if}}">
+         <a href="/all-users">All Users</a>
+      </li>
+
+   </div>
+   <div>
+
+      {{else}}
+      <div class="flex">
+         <span class="text-5xl text-red-600 mx-2"><i class="bi bi-telephone text-4xl"></i>1730</span>
+         <p class="font-medium"> Xorazm bo'yicha yetkazib berish bepul. Agar 30 daqiqadan <br> kechiktirlsa
+            buyurtmangizni bepul oling!</p>
+      </div>
+      <div class="flex">
+         <a class="text-3xl mx-3" href="/cart"><i class="bi bi-cart2 duration-200 hover:text-green-500"></i></a>
+         {{/if}}
+         <a href="/kirish"> <button
+               class="text-xl hover:text-red-600 border-solid  border-2 rounded-full w-20 border-black p-1 duration-200 hover:border-red-600">Kirish</button></a>
+      </div>
+
+   </div>
