@@ -21,5 +21,5 @@ server.set('views', './pages')
 
 server.use(router)
 
-const PORT = process.env.PORT || 8091;
+const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => console.log(`Server started on port http://localhost:${PORT}`));

@@ -1,6 +1,32 @@
 <div class="w-full h-full pt-28">
-   <div class="mx-auto">
+   {{!-- <div class="mx-auto">
       <img class="mx-auto rounded-xl w-3/4 cursor-pointer" src="/imgs/foto-BG.jpg" alt="salom" />
+   </div> --}}
+  <div id="homepage-slider" class="st-slider">
+      <input type="radio" class="cs_anchor radio" name="slider" id="play1" checked="" hidden/>
+
+      <div class="images">
+         <div class="images-inner">
+            <div class="image-slide">
+               <div class="image"><img src="/imgs/foto-BG.jpg" alt="img1" style="border-radius: 10px;"></div>
+            </div>
+            <div class="image-slide">
+               <div class="image"><img src="/imgs/foto-bg2.jpg" alt="img2" style="border-radius: 10px;"></div>
+            </div>
+            <div class="image-slide">
+               <div class="image"><img src="/imgs/bg3.jpg" alt="img3" style="border-radius: 10px;"></div>
+            </div>
+         </div>
+      </div>
+
+      <div class="labels">
+
+         <div class="fake-radio">
+            <label for="slide1" class="radio-btn"></label>
+            <label for="slide2" class="radio-btn"></label>
+            <label for="slide3" class="radio-btn"></label>
+         </div>
+      </div>
    </div>
    {{! Mahsulotlar }}
    <div class="px-40 pt-10 flex-wrap">
@@ -26,9 +52,9 @@
             </div>
 
          </div>
-        
-        
-        
+
+
+
 
       </div>
    </div>
@@ -162,24 +188,35 @@
 
       </div>
    </div>
+   <div id="my-box" class="box">
+      <p class="textt">Saytimiz <b>beta</b> rejimda faoliyat yuritmoqda!</p>
 
+      <button id="close-button" class="btn">Ok</button>
+   </div>
    <footer class="w-full bg-gray-900 h-auto px-40 mt-10 py-6 text-gray-400">
       <div class="flex justify-between">
          <div class="mt-8 cursor-default">
             <div class="flex items-center">
                <img class="w-20 px-2 mr-2" src="/imgs/french-fries.png" alt="">
-               <p class="text-6xl text-white font-semibold cursor-pointer">Fa<span class="text-red-600">st</span> food</p>
+               <p class="text-6xl text-white font-semibold cursor-pointer">Fa<span class="text-red-600">st</span> food
+               </p>
             </div>
-            <p class="mx-5 my-4 cursor-default">Fast food barcha huquqlar ximoyalangan. 30.04.2023</p>
+            <p class="mx-5 my-4 cursor-default">© Copyright 30.04.2023</p>
          </div>
          <div class="flex flex-col">
             <p>Bizning filyallar:</p>
-            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i class="bi bi-geo-alt"></i>Urganch</span>
-            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i class="bi bi-geo-alt"></i>Xiva</span>
-            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i class="bi bi-geo-alt"></i>Yangiariq</span>
-            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i class="bi bi-geo-alt"></i>Bog'ot</span>
-            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i class="bi bi-geo-alt"></i>Shovot</span>
-            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i class="bi bi-geo-alt"></i>Xonqa</span>
+            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i
+                  class="bi bi-geo-alt"></i>Urganch</span>
+            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i
+                  class="bi bi-geo-alt"></i>Xiva</span>
+            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i
+                  class="bi bi-geo-alt"></i>Yangiariq</span>
+            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i
+                  class="bi bi-geo-alt"></i>Bog'ot</span>
+            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i
+                  class="bi bi-geo-alt"></i>Shovot</span>
+            <span class="cursor-pointer hover:text-gray-300 hover:translate-x-1 duration-300"><i
+                  class="bi bi-geo-alt"></i>Xonqa</span>
          </div>
          <div class="flex flex-col">
             <p>Bizning Mahsulotlar:</p>
@@ -210,3 +247,14 @@
 
    </footer>
 </div>
+<script>
+   window.onload = function () {
+      var closeButton = document.getElementById('close-button');
+      var myBox = document.getElementById('my-box');
+
+      closeButton.addEventListener('click', function () {
+         myBox.style.display = 'none';
+      });
+   };
+
+</script>
